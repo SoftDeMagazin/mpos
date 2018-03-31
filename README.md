@@ -6,11 +6,11 @@ The goal is to create a simple mobile pos that shows a list of products and send
 
 ### Build
 
-App scheleton with React Native [done]
-Create an interface with a list 
-Add a title
-Add a search button
-Add a drawer
+* App scheleton with React Native [done]
+* Create an interface with a list [done] 
+* Add a title
+* Add a search button
+* Add a drawer
 
 ### Measure
 
@@ -31,3 +31,29 @@ FlatList is an interface to build simple list. It supports the following paramet
 * data - an array of items data
 * extraData 
 * renderItem - a method that describes how each item should be rendered. Expects a ReactElement to be returned
+
+## Iteration 2
+
+### Build
+
+* Implement an existing template for the list 
+
+### Measure
+
+After the second iteration Material UI was added (https://github.com/xotahal/react-native-material-ui)
+
+The library is still in development so it lacks documentation and some of the components are not implmlemented. Still I managed to add a Toolbar component with a search fuctionality that gave my application a better look and feel. I've replaced the FlatList items with Button component and added an alert function that displays the price
+
+### Learn
+
+* Expore the Awesome React Native list (https://github.com/jondot/awesome-react-native)
+
+## Interation 3
+
+### Build
+
+Create an apk for the application
+
+### Measure
+
+### Learn
