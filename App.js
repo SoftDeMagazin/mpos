@@ -45,7 +45,7 @@ export default class App extends React.Component {
           <FlatList
               data={this.state.products}
               renderItem={({item}) => <Button key={item.id} text={item.name} onPress={() => {alert(item.price)}}/>}  
-              keyExtractor={(item, index) => index} />
+              keyExtractor={(item, index) => index.toString()} />
         </View>
       </ThemeProvider>
     );

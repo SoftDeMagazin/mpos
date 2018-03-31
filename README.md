@@ -56,4 +56,15 @@ Create an apk for the application
 
 ### Measure
 
+Created a new organization account in github an pushed the code in the mpos repo. Went in the appscenter.ms interface and configured the app. Seems that I need to specify a build variant.
+
+* Installed Android 6.0 (Marshmallow)
+* Installed Android Buid Tools 23.0.1
+* Configured Android Home environmental variable
+
+
 ### Learn
+
+How to build React Native APK
+
+https://facebook.github.io/react-native/docs/getting-started.html
