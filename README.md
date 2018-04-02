@@ -67,4 +67,24 @@ Created a new organization account in github an pushed the code in the mpos repo
 
 How to build React Native APK
 
-https://facebook.github.io/react-native/docs/getting-started.html
+## Iteration 4
+
+Create an apk for the application
+
+### Measure
+
+Managed to create a valid apk build both from the local development and using Microsoft AppCenter build tool
+
+## Learn
+
+## Iteration 5
+
+### Build
+
+Expore UI frameworks and templates
+
+### Measure
+
+React Native Base is a free and opensource UI component library. It's well documented and has a rich list of components. 
+
+### Learn
