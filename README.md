@@ -2,15 +2,19 @@
 
 The goal is to create a simple mobile pos that shows a list of products and sends products to the cash register
 
+<img src="https://raw.githubusercontent.com/SoftDeMagazin/mpos/docs/images/Screenshot_2018-04-02-14-13-56.png" width="285">
+
+<img src="https://raw.githubusercontent.com/SoftDeMagazin/mpos/docs/images/Screenshot_2018-04-02-14-14-03.png" width="285">
+
 ## Interation 1
 
 ### Build
 
 * App scheleton with React Native [done]
 * Create an interface with a list [done] 
-* Add a title
-* Add a search button
-* Add a drawer
+* Add a title [done]
+* Add a search button [done]
+* Add a drawer [done]
 
 ### Measure
 
