@@ -92,3 +92,21 @@ Expore UI frameworks and templates
 React Native Base is a free and opensource UI component library. It's well documented and has a rich list of components. 
 
 ### Learn
+
+## Iteration 6
+
+
+### Build
+
+Launch native android activity to select bluetooth devices
+
+### Measure
+
+Created a new DeviceActivity that allows to select form a list of paired bluetooth devices. Added a new class ActivityStarterModule and ActivityStarterReactPackage that act as a proxy between javascript and java code. Edited the MainApplication to include the new package. 
+
+Build ends with the error No resource found that matches the given name (at 'text' with value '@string/msg_please_select_device')
+
+### Learn
+
+Understand how activities are linked with layout resources (https://developer.android.com/guide/topics/resources/layout-resource.html)
+

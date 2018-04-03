@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, FlatList, DrawerLayoutAndroid } from 'react-native';
+import { StyleSheet, View, FlatList, DrawerLayoutAndroid, ScrollView } from 'react-native';
 
 import { COLOR, ThemeProvider, Button, ActionButton } from 'react-native-material-ui';
 
@@ -7,27 +7,26 @@ import { Toolbar } from 'react-native-material-ui';
 
 import { Container, Header, Content, List, ListItem, Text, Left, Right } from 'native-base';
 
-class DrawerMenu extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Content>
-          <List>
-            <ListItem>
-              <Text>Categorii</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Produse</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Comenzi</Text>
-            </ListItem>
-          </List>
-        </Content>
-      </Container>
-    );
+import DrawerMenu from './components/DrawerMenu'
+
+import {
+  AppRegistry,
+  NativeEventEmitter,
+  NativeModules
+} from 'react-native';
+
+import BatchedBridge from "react-native/Libraries/BatchedBridge/BatchedBridge";
+
+export class ExposedToJava {
+  alert(message) {
+      alert(message);
   }
 }
+
+const exposedToJava = new ExposedToJava();
+BatchedBridge.registerCallableModule("JavaScriptVisibleToJava", exposedToJava);
+
+const activityStarter = NativeModules.ActivityStarter;
 
 // you can set your style right here, it'll be propagated to application
 const uiTheme = {
@@ -50,7 +49,22 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({products: [{id: 1, name: "Espresso un produs cu nume foarte lung care se va intinde pe mai multe randuri", price: "999.99"}, {id: 2, name: "Cappucino", price: "6.00"}]})
+    this.setState({products: [
+      {id: 1, name: "Espresso un produs cu nume foarte lung care se va intinde pe mai multe randuri", price: "999.99"}
+      , {id: 2, name: "Cappucino", price: "6.00"} 
+      , {id: 3, name: "Cappucino", price: "6.00"}
+      , {id: 4, name: "Cappucino", price: "6.00"}
+      , {id: 5, name: "Cappucino", price: "6.00"}
+      , {id: 6, name: "Cappucino", price: "6.00"}
+      , {id: 7, name: "Cappucino", price: "6.00"}
+      , {id: 8, name: "Cappucino", price: "6.00"}
+      , {id: 9, name: "Cappucino", price: "6.00"}
+      , {id: 11, name: "Cappucino", price: "6.00"}
+      , {id: 12, name: "Cappucino", price: "6.00"}
+      , {id: 13, name: "Cappucino", price: "6.00"}
+      , {id: 14, name: "Cappucino", price: "6.00"}
+      , {id: 15, name: "Cappucino", price: "6.00"}
+    ]})
   }
 
   openMenu() {
@@ -80,14 +94,17 @@ export default class App extends React.Component {
               }}
               onLeftElementPress={() => this.openMenu()}
             />
-             
+            <ScrollView> 
             <List
                 dataArray={this.state.products}
                 renderRow={(item) => <ListItem onPress={() => {alert(item.price)}}><Left><Text >{item.name}</Text></Left><Right><Text>{item.price}</Text></Right></ListItem>}
                 
                 keyExtractor={(item, index) => index.toString()} />
+            </ScrollView>    
             <ActionButton icon="done" /> 
-              
+            <Text
+            onPress={() => activityStarter.navigateToExample()}
+            >Start activity</Text>  
           </View>
         </DrawerLayoutAndroid>
       </ThemeProvider>
