@@ -98,7 +98,7 @@ React Native Base is a free and opensource UI component library. It's well docum
 
 ### Build
 
-Launch native android activity to select bluetooth devices
+Goal: Launch native android activity to select bluetooth devices
 
 ### Measure
 
@@ -109,4 +109,49 @@ Build ends with the error No resource found that matches the given name (at 'tex
 ### Learn
 
 Understand how activities are linked with layout resources (https://developer.android.com/guide/topics/resources/layout-resource.html)
+
+### Iteration 7
+
+## Build 
+
+Goal: Launch native android activity to select bluetooth devices
+
+* make build pass
+
+## Measure
+
+Build was created because of undefined properties in values/settings.xml that were refered in the layout and because the package name in the ActivityStarterModule was incorect
+
+## Learn
+
+
+### Iteration 8
+
+## Build
+
+Goal: Include Datecs COM and connect cu cash register
+
+## Measure
+
+jar file was added in the libs directory and linked in build.gradle dependencies list. Most of the connection code was moved in the MainActivity. Build is failing due to unincluded classes
+
+## Learn
+
+### Iteration 9
+
+## Build
+
+Goal: Include Datecs and connect with the cash register
+
+## Measure
+
+Succesfuly integrated Datecs and connected with cash register. Code is invoked from the MainActivity.
+
+## Learn
+
+To proxy the physical device run 
+
+```
+adb reverse tcp:8081 tcp:8081
+```
 

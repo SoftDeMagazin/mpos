@@ -61,8 +61,11 @@ class ActivityStarterModule extends ReactContextBaseJavaModule {
     void navigateToExample() {
         Activity activity = getCurrentActivity();
         if (activity != null) {
-            Intent intent = new Intent(activity, DeviceActivity.class);
-            activity.startActivity(intent);
+          //  Intent intent = new Intent(activity, DeviceActivity.class);
+          //  activity.startActivity(intent);
+
+            Intent selectDevice = new Intent(activity, DeviceActivity.class);
+	        activity.startActivityForResult(selectDevice, 2);	
         }
     }
 

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SimplePOS</string>
     <string name="msg_please_select_device">Selecteaza Dispozitiv</string>
+    <string name="msg_please_wait">Va rugam asteptati</string>
 </resources>

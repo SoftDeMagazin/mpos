@@ -17,8 +17,8 @@ export default class DrawerMenu extends React.Component {
               <ListItem onPress={() => alert('Comenzi')}>
                 <Text>Comenzi</Text>
               </ListItem>
-              <ListItem onPress={() => alert('Rapoarte')}>
-                <Text>Comenzi</Text>
+              <ListItem onPress={() => this.props.activityStarter.navigateToExample()}>
+                <Text>Conectare casa</Text>
               </ListItem>
             </List>
           </Content>

@@ -74,7 +74,7 @@ export default class App extends React.Component {
   render() {
     const navigationView = (
       <View style={{flex: 1, backgroundColor: '#fff'}}>
-        <DrawerMenu />
+        <DrawerMenu activityStarter={activityStarter} />
       </View>
     );
     return (
@@ -102,9 +102,6 @@ export default class App extends React.Component {
                 keyExtractor={(item, index) => index.toString()} />
             </ScrollView>    
             <ActionButton icon="done" /> 
-            <Text
-            onPress={() => activityStarter.navigateToExample()}
-            >Start activity</Text>  
           </View>
         </DrawerLayoutAndroid>
       </ThemeProvider>
